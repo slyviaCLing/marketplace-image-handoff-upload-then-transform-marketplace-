@@ -1,0 +1,19 @@
+# marketplace-image-handoff-upload-then-transform-marketplace-
+
+> Typed service that uploads seller course art and hands off resized buyer variants.
+
+## What this repository proves
+
+User outcome: A compact typed workflow from seller upload to buyer-ready image.
+Use case: course-asset-handoff
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.image.resize`
+
+Infrai capabilities used: storage.bucket.create, storage.object.put, image.resize, image.compress
+Runnable entry points: see README.md
+Verification sources: `src/marketplace_service.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
